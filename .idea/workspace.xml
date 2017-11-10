@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aea3b63-6742-4b6e-ae00-f655a8fa34ed" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wisk/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/wisk/database/migrations/2014_10_12_000000_create_users_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wisk/public/css/style.css" afterPath="$PROJECT_DIR$/wisk/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wisk/resources/views/viewChapters.blade.php" afterPath="$PROJECT_DIR$/wisk/resources/views/viewChapters.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wisk/resources/views/viewSolution.blade.php" afterPath="$PROJECT_DIR$/wisk/resources/views/viewSolution.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,12 +33,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewChapters.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="viewChapters.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wisk/resources/views/viewChapters.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
               <caret line="25" column="74" lean-forward="false" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="85">
+                <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -98,6 +108,7 @@
         <option value="$PROJECT_DIR$/wisk/public/css/style.css" />
         <option value="$PROJECT_DIR$/wisk/resources/views/viewSolution.blade.php" />
         <option value="$PROJECT_DIR$/wisk/resources/views/viewChapters.blade.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -329,12 +340,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1510310665304</updated>
-      <workItem from="1510310672441" duration="26721000" />
+      <workItem from="1510310672441" duration="26933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26721000" />
+    <option name="totallyTimeSpent" value="26933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
@@ -625,6 +636,17 @@
         <state relative-caret-position="425">
           <caret line="25" column="74" lean-forward="false" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="85">
+            <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
