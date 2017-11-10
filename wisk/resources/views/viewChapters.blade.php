@@ -23,7 +23,7 @@
 
                 {{ Form::open(array('url' => 'delete/' . $value->id)) }}
                 {{ Form::hidden('_method', 'post') }}
-                {{ Form::submit('Delete', array('class' => 'btn btn-error')) }}
+                {{ Form::submit('Delete', array('class' => 'btn btn-danger')) }}
                 {{ Form::close() }}
 
 
