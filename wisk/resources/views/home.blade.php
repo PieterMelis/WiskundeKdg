@@ -19,7 +19,7 @@
                             <a href="{{ url('/viewChapters') }} " class="">Al de hoofdstuken</a>
                             <a href="{{ url('/addSolution') }} " class="">Oplossing toevoegen</a>
                         </div>
-<br>
+                        <br>
                         <table class="table table-striped table-bordered">
                             <thead>
                             <tr>

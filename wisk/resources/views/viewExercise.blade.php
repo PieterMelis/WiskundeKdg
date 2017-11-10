@@ -20,12 +20,10 @@
 
             <td>
 
-
                 {{ Form::open(array('url' => 'delete/' . $value->id)) }}
                 {{ Form::hidden('_method', 'post') }}
                 {{ Form::submit('Delete', array('class' => 'btn btn-error')) }}
                 {{ Form::close() }}
-
 
             </td>
         </tr>

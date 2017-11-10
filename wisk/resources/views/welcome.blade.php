@@ -16,18 +16,6 @@
         <link href="{{ asset('css/foundation.css') }}" rel="stylesheet">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
-        <style>
-
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-
-
-        </style>
     </head>
     <body>
 
@@ -58,7 +46,7 @@
                             @else
                                 <a href="{{ route('login') }}" class="hollow button">Login</a>
                                 <a href="{{ route('register') }} " class="hollow button">Register</a>
-                                @endauth
+                            @endauth
                 @endif
             </div>
         </div>
@@ -70,16 +58,7 @@
     </div>
 
     <div id="main-content-section" data-magellan-target="main-content-section">
-
-
-
-
     </div>
-
-
-
-
-
     </body>
     <!-- Scripts -->
     <script src="{{ asset('js/foundation/vendor/jquery.js') }}"></script>
