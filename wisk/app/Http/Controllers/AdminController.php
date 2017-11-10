@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\IsAdmin;
+
 use Illuminate\Support\Facades\View;
 use Wiskunde\Solution;
 use App\User;
@@ -17,7 +19,7 @@ class AdminController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('admin');
     }
     /**
      * Display a listing of the resource.
@@ -35,10 +37,7 @@ class AdminController extends Controller
     {
         return view("addChapter");
     }
-    public function indexSolution()
-    {
-        return view("addSolution");
-    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -76,48 +75,9 @@ class AdminController extends Controller
             $chapter->save();
         }
         Session::flash('message', 'Hoofdstuk toegevoegd');
-        return Redirect::back();
+        return Redirect::to('home');
     }
-    public function storeSolution(Request $request)
-    {
-        // validate
-// read more on validation at http://laravel.com/docs/validation
-        $rules = array(
-            'title'      => 'required',
-            'chapter'     => 'required' ,
-            'exercise'       => 'required',
-            'image'      => 'required|image'
 
-        );
-        $validator = Validator::make(Input::all(), $rules);
-        if ($validator->fails()) {
-            return Redirect::back()
-                ->withErrors($validator);
-        }
-
-        else {
-            $image = $request->file('image');
-            $name = Input::get('title').'.'.$image->getClientOriginalExtension();
-            $image->move(public_path('img/uploads'), $name);
-
-                // store
-                $solution = new Solution();
-            $solution->title           = Input::get('title');
-            $solution->chapter         = Input::get('chapter');
-            $solution->exercise        = Input::get('exercise');
-            $solution->view         = 1;
-            $solution->picture         = $name;
-            $solution->userId          = Auth::user()->id;
-
-            $solution->save();
-                // redirect
-                Session::flash('message', 'Oplossing toegevoegd');
-                return Redirect::back();
-
-            }
-
-
-        }
 
 
     /**

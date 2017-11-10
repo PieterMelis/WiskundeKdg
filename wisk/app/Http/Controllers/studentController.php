@@ -19,9 +19,9 @@ class studentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function indexSolution()
     {
-        //
+        return view("addSolution");
     }
 
     /**
@@ -40,9 +40,45 @@ class studentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeSolution(Request $request)
     {
-        //
+        // validate
+// read more on validation at http://laravel.com/docs/validation
+        $rules = array(
+            'title'      => 'required',
+            'chapter'     => 'required' ,
+            'exercise'       => 'required',
+            'image'      => 'required|image'
+
+        );
+        $validator = Validator::make(Input::all(), $rules);
+        if ($validator->fails()) {
+            return Redirect::back()
+                ->withErrors($validator);
+        }
+
+        else {
+            $image = $request->file('image');
+            $name = Input::get('title').'.'.$image->getClientOriginalExtension();
+            $image->move(public_path('img/uploads'), $name);
+
+            // store
+            $solution = new Solution();
+            $solution->title           = Input::get('title');
+            $solution->chapter         = Input::get('chapter');
+            $solution->exercise        = Input::get('exercise');
+            $solution->view            = 1;
+            $solution->picture         = $name;
+            $solution->userName        = Auth::user()->name;
+
+            $solution->save();
+            // redirect
+            Session::flash('message', 'Oplossing toegevoegd');
+            return Redirect::back();
+
+        }
+
+
     }
 
     /**
@@ -57,6 +93,7 @@ class studentController extends Controller
         $solution = Solution::where('chapter' ,$chapter->nr)->get();
 
         return View::make('viewSolution')
+            ->with('chapter', $chapter)
             ->with('solution', $solution);
     }
 

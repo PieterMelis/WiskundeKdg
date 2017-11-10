@@ -20,7 +20,7 @@ class CreateSolutionTable extends Migration
             $table->string('exercise');
             $table->string('picture');
             $table->integer('view');
-            $table->integer('userId');
+            $table->string('userName');
             $table->softDeletes();
             $table->timestamps();
         });

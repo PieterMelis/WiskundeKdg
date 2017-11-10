@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('admin_area', ['middleware' => 'admin', function () {
+    //
+}]);
+
 
 Route::get('/', 'WelcomeController@index');
 
@@ -33,8 +37,8 @@ Route::get('/chapter/{id}', 'studentController@show');
 
 /*-------------------------Solution----------------------------*/
 
-Route::get('addSolution', 'adminController@indexSolution');
-Route::post('solution', 'adminController@storeSolution');
+Route::get('addSolution', 'studentController@indexSolution');
+Route::post('solution', 'studentController@storeSolution');
 
 
 
