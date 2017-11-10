@@ -1,0 +1,324 @@
+.errors{
+
+
+    text-decoration: none;
+    list-style: none;
+    padding: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+.hero-full-screen {
+    height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: url("https://images.unsplash.com/photo-1488722796624-0aa6f1bb6399?auto=format&fit=crop&w=1350&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D") center center no-repeat;
+    background-size: cover;
+}
+
+.hero-full-screen .middle-content-section {
+    text-align: center;
+    color: #fefefe;
+}
+
+.hero-full-screen .top-content-section {
+    width: 100%;
+}
+
+.hero-full-screen .bottom-content-section {
+    padding: 1rem;
+}
+
+.hero-full-screen .bottom-content-section {
+    color: white;
+}
+
+.hero-full-screen .top-bar {
+    background: transparent;
+}
+
+.hero-full-screen .top-bar .menu {
+    background: transparent;
+}
+
+.hero-full-screen .top-bar .menu-text {
+    color: #fefefe;
+}
+
+.hero-full-screen .top-bar .menu li {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.hero-full-screen .top-bar .menu a {
+    color: #fefefe;
+    font-weight: bold;
+}
+.button.hollow{
+     background-color: rgba(255,255,255,0.3);
+     padding: 2em;
+     color: white ;
+     border: white 1px solid;
+ }
+.button.hollow:hover{
+    background-color: rgba(255,255,255,0.9);
+    color: grey ;
+    border: white 1px solid;
+}
+.form-control {
+
+    border-radius: 0;
+}
+
+.errorr .hero-section{
+    background: url(https://images.unsplash.com/photo-1478101728769-1892e04f08bb?auto=format&fit=crop&w=1350&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) 50% no-repeat;
+       background-size: cover;
+    height: 100vh;
+    margin-bottom: 5em;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+
+.hero-section {
+    background: url("https://images.unsplash.com/photo-1455577625686-e8e5578a4c19?dpr=1&auto=format&fit=crop&w=1950&h=&q=60&cs=tinysrgb&crop=") 50% no-repeat;
+    background-size: cover;
+    height: 60vh;
+    margin-bottom: 5em;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.hero-section .hero-section-text {
+    color: #fefefe;
+    text-shadow: 1px 1px 2px #0a0a0a;
+    margin-top: 15em;
+
+    padding: 2em;
+}
+.coverBlack{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    margin-bottom:0;
+}
+
+.adminBlock a{
+    width: 100%;
+}
+
+
+
+
+.title {
+    font-size: 84px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.md-tabs {
+    background-color: #1779BA;
+}
+
+.md-tabs > .mobile-nav-bar {
+    background-color: #1779BA;
+    margin-bottom: 15px;
+}
+
+.md-tabs > .mobile-nav-bar .title-bar-text {
+    font-size: 26px;
+}
+
+.md-tabs > .mobile-nav-bar a {
+    color: #fefefe;
+}
+
+.md-tabs > .tabs {
+    margin: 0;
+    border: 0;
+    background: #1779BA;
+    list-style-type: none;
+    display: table;
+    width: 100%;
+}
+
+.md-tabs > .tabs > .tabs-title {
+    display: table-cell;
+    width: 25%;
+    text-align: center;
+    display: inline-block;
+}
+
+.md-tabs > .tabs > .tabs-title.is-active > a {
+    color: #3ADB76;
+    background-color: transparent;
+    outline: none;
+}
+
+.md-tabs > .tabs > .tabs-title.is-active:nth-of-type(1) ~ .slide {
+    left: calc((100% / 4) * 0);
+}
+
+.md-tabs > .tabs > .tabs-title.is-active:nth-of-type(2) ~ .slide {
+    left: calc((100% / 4) * 1);
+}
+
+.md-tabs > .tabs > .tabs-title.is-active:nth-of-type(3) ~ .slide {
+    left: calc((100% / 4) * 2);
+}
+
+.md-tabs > .tabs > .tabs-title.is-active:nth-of-type(4) ~ .slide {
+    left: calc((100% / 4) * 3);
+}
+
+.md-tabs > .tabs > .tabs-title > a {
+    color: #fefefe;
+    font-size: 16px;
+}
+
+.md-tabs > .tabs > .tabs-title > a:hover, .md-tabs > .tabs > .tabs-title > a:focus {
+    background: transparent;
+}
+
+.slide {
+    background: #3ADB76;
+    width: calc(100% / 4);
+    height: 4px;
+    position: relative;
+    left: 0;
+    top: 52px;
+    transition: left 0.3s ease-out;
+}
+.form-horizontal .control-label {
+    text-align: left;
+}
+.btn {
+    border-radius: 0;
+    width: 90%;
+}
+
+
+
+
+@media screen and (max-width: 39.9375em) {
+    .slide {
+        width: 0;
+        height: 0;
+    }
+    .md-tabs > .accordion {
+        margin-left: 0;
+        list-style-type: none;
+    }
+    .md-tabs > .accordion > .accordion-item > .accordion-title {
+        position: relative;
+        display: block;
+        padding: 1.25rem 1rem;
+        border: 0;
+        font-size: 0.75rem;
+        line-height: 1;
+        background: #1779BA;
+        color: #fefefe;
+    }
+    .md-tabs > .accordion > .accordion-item > .accordion-title:hover {
+        background-color: #1779BA;
+        color: #3ADB76;
+        outline: none;
+    }
+    .md-tabs > .accordion > .is-active.accordion-item > a.accordion-title {
+        border-bottom: 4px solid #3ADB76;
+        color: #3ADB76;
+    }
+    .md-tabs > .accordion > .accordion-item > .accordion-content {
+        display: none;
+        padding: 1rem;
+        border: 1px solid #e6e6e6;
+        border-top: 0px;
+        background-color: #fefefe;
+        color: #0a0a0a;
+    }
+    > .accordion > .accordion-item > .accordion-title:focus {
+        background-color: #1779BA;
+        color: #3ADB76;
+        outline: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
