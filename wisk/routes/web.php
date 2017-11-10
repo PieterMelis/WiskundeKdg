@@ -20,15 +20,33 @@ Route::get('/home', 'HomeController@index')
     ->name('home');
 
 
-
-
 /*-------------------------Chapter----------------------------*/
 Route::get('addChapter', 'adminController@indexChapter');
 Route::post('chapter', 'adminController@store');
 Route::get('viewChapters', 'adminController@index');
 Route::post('delete/{id}', 'adminController@delete');
+Route::get('/chapter/{id}', 'studentController@show');
+
+
+
+
+
+/*-------------------------Solution----------------------------*/
 
 Route::get('addSolution', 'adminController@indexSolution');
-
-
 Route::post('solution', 'adminController@storeSolution');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
