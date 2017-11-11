@@ -24,6 +24,5 @@
 
     {{ Form::close() }}
 
-
 </div>
 @endsection

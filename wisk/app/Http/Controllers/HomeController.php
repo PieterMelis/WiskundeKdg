@@ -4,9 +4,10 @@ namespace Wiskunde\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Wiskunde\Solution;
+use Illuminate\Support\Facades\View;
 
 use Wiskunde\Chapter;
-
+use Wiskunde\Subchapter;
 class HomeController extends Controller
 {
     /**
@@ -26,9 +27,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $allChapters = Chapter::All();
-        return view('home')
-            ->with('allChapters',$allChapters);
+
+        $allSubchapter = Subchapter::all();
+        $allChapters = Chapter::all();
+        return View::make("home")
+            ->with('allChapters', $allChapters)
+            ->with('allSubchapter', $allSubchapter);
     }
     public function question()
     {

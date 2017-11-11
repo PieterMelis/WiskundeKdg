@@ -31,6 +31,8 @@ Route::get('viewChapters', 'adminController@index');
 Route::post('delete/{id}', 'adminController@delete');
 Route::get('/chapter/{id}', 'studentController@show');
 
+Route::post('/subChapter', 'adminController@add_subchapter');
+Route::get('/addSubChapter', 'adminController@indexSubChapter');
 
 
 

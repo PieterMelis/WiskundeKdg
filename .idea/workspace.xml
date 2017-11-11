@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aea3b63-6742-4b6e-ae00-f655a8fa34ed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wisk/database/migrations/2016_12_01_092007_create_subchapters_table.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wisk/readme.md" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wisk/app/Subchapter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wisk/resources/views/addSubChapter.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wisk/app/Http/Controllers/AdminController.php" afterPath="$PROJECT_DIR$/wisk/app/Http/Controllers/AdminController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wisk/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/wisk/app/Http/Controllers/HomeController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wisk/resources/views/addChapter.blade.php" afterPath="$PROJECT_DIR$/wisk/resources/views/addChapter.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wisk/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/wisk/resources/views/home.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wisk/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/wisk/resources/views/layouts/app.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wisk/routes/web.php" afterPath="$PROJECT_DIR$/wisk/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,88 +24,40 @@
       <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wisk/app/Http/Controllers/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+            <state relative-caret-position="85">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#45#73#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wisk/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewChapters.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wisk/resources/views/viewChapters.blade.php">
+      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wisk/app/Http/Controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="74" lean-forward="false" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_12_01_092007_create_subchapters_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wisk/database/migrations/2016_12_01_092007_create_subchapters_table.php">
+      <file leaf-file-name="studentController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wisk/app/Http/Controllers/studentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="viewSolution.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wisk/resources/views/viewSolution.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="74" lean-forward="false" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wisk/resources/views/welcome.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wisk/app/Http/Controllers/Auth/RegisterController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="67" column="52" lean-forward="false" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014_10_12_000000_create_users_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wisk/database/migrations/2014_10_12_000000_create_users_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addChapter.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wisk/resources/views/addChapter.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wisk/resources/views/home.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="66" lean-forward="false" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+            <state relative-caret-position="187">
+              <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,6 +68,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wisk/resources/views/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -134,22 +101,16 @@
         <option value="$PROJECT_DIR$/wisk/app/Http/Controllers/WelcomeController.php" />
         <option value="$PROJECT_DIR$/wisk/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/wisk/app/Console/Kernel.php" />
-        <option value="$PROJECT_DIR$/wisk/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/wisk/app/Chapter.php" />
         <option value="$PROJECT_DIR$/wisk/database/migrations/2017_11_10_125241_create_chapter_table.php" />
         <option value="$PROJECT_DIR$/wisk/resources/views/addSolution.blade.php" />
         <option value="$PROJECT_DIR$/wisk/app/Solution.php" />
         <option value="$PROJECT_DIR$/wisk/.env" />
-        <option value="$PROJECT_DIR$/wisk/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/wisk/config/app.php" />
         <option value="$PROJECT_DIR$/wisk/composer.json" />
-        <option value="$PROJECT_DIR$/wisk/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/wisk/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/wisk/resources/views/viewExercise.blade.php" />
-        <option value="$PROJECT_DIR$/wisk/app/Http/Controllers/studentController.php" />
         <option value="$PROJECT_DIR$/wisk/database/migrations/2017_11_10_145834_create_solution_table.php" />
-        <option value="$PROJECT_DIR$/wisk/routes/web.php" />
-        <option value="$PROJECT_DIR$/wisk/app/Http/Controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/wisk/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/wisk/app/Http/Middleware/IsAdmin.php" />
         <option value="$PROJECT_DIR$/wisk/database/migrations/2014_10_12_000000_create_users_table.php" />
@@ -160,6 +121,14 @@
         <option value="$PROJECT_DIR$/wisk/database/migrations/2016_12_01_092007_create_subchapters_table.php" />
         <option value="$PROJECT_DIR$/wisk/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/wisk/resources/views/addChapter.blade.php" />
+        <option value="$PROJECT_DIR$/wisk/resources/views/addSubChapter.blade.php" />
+        <option value="$PROJECT_DIR$/wisk/routes/web.php" />
+        <option value="$PROJECT_DIR$/wisk/app/Subshapter.php" />
+        <option value="$PROJECT_DIR$/wisk/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/wisk/app/Http/Controllers/studentController.php" />
+        <option value="$PROJECT_DIR$/wisk/app/Http/Controllers/AdminController.php" />
+        <option value="$PROJECT_DIR$/wisk/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/wisk/resources/views/home.blade.php" />
       </list>
     </option>
   </component>
@@ -262,29 +231,6 @@
               <item name="wisk" type="b2602c69:ProjectViewProjectNode" />
               <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Auth" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="wisk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Middleware" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="wisk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="wisk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -305,13 +251,6 @@
               <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="wisk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -326,14 +265,6 @@
               <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="wisk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wisk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="auth" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="wisk" type="b2602c69:ProjectViewProjectNode" />
@@ -362,9 +293,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\KdG\2017-2018\Sociale Innovatie 3\Sociale Innovatie 3 Participatie 3\wisk\wisk\database\migrations" />
-      <recent name="D:\KdG\2017-2018\Sociale Innovatie 3\Sociale Innovatie 3 Participatie 3\wisk\wisk\resources\views" />
       <recent name="D:\KdG\2017-2018\Sociale Innovatie 3\Sociale Innovatie 3 Participatie 3\wisk\wisk\app" />
+      <recent name="D:\KdG\2017-2018\Sociale Innovatie 3\Sociale Innovatie 3 Participatie 3\wisk\wisk\resources\views" />
+      <recent name="D:\KdG\2017-2018\Sociale Innovatie 3\Sociale Innovatie 3 Participatie 3\wisk\wisk\database\migrations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\KdG\2017-2018\Sociale Innovatie 3\Sociale Innovatie 3 Participatie 3\wisk\wisk\app\Http\Controllers" />
@@ -392,12 +323,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1510310665304</updated>
-      <workItem from="1510310672441" duration="28485000" />
+      <workItem from="1510310672441" duration="32836000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28485000" />
+    <option name="totallyTimeSpent" value="32836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
@@ -503,24 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wisk/app/Solution.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wisk/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <element signature="e#45#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wisk/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="767">
@@ -537,36 +450,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wisk/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wisk/app/Http/Controllers/studentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="71" column="31" lean-forward="false" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="31" />
-          <folding>
-            <element signature="e#45#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wisk/app/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wisk/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -587,22 +474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wisk/database/migrations/2017_11_10_125241_create_chapter_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wisk/database/migrations/2017_11_10_145834_create_solution_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="21" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wisk/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -615,14 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="852">
           <caret line="405" column="0" lean-forward="true" selection-start-line="405" selection-start-column="0" selection-end-line="405" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wisk/app/Http/Controllers/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -649,18 +512,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wisk/database/migrations/2016_12_01_092007_create_subchapters_table.php">
+    <entry file="file://$PROJECT_DIR$/wisk/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wisk/app/Http/Controllers/Auth/RegisterController.php">
+    <entry file="file://$PROJECT_DIR$/wisk/resources/views/addChapter.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="67" column="52" lean-forward="false" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -673,18 +536,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wisk/resources/views/addSolution.blade.php">
+    <entry file="file://$PROJECT_DIR$/wisk/app/Http/Controllers/Auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wisk/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="66" lean-forward="false" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+        <state relative-caret-position="716">
+          <caret line="67" column="52" lean-forward="false" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -697,6 +552,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wisk/database/migrations/2017_11_10_145834_create_solution_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="21" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wisk/database/migrations/2016_12_01_092007_create_subchapters_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wisk/database/migrations/2017_11_10_125241_create_chapter_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wisk/app/Solution.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wisk/app/Subchapter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wisk/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="58" column="36" lean-forward="false" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wisk/resources/views/addSubChapter.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wisk/resources/views/viewSolution.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -705,18 +616,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wisk/resources/views/welcome.blade.php">
+    <entry file="file://$PROJECT_DIR$/wisk/resources/views/addSolution.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wisk/resources/views/addChapter.blade.php">
+    <entry file="file://$PROJECT_DIR$/wisk/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+        <state relative-caret-position="391">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wisk/app/Http/Controllers/studentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wisk/app/Http/Controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#45#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wisk/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wisk/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
           <folding />
         </state>
       </provider>

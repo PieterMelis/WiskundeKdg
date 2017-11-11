@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\IsAdmin;
 
 use Illuminate\Support\Facades\View;
 use Wiskunde\Solution;
-use App\User;
+use Wiskunde\User;
+use Wiskunde\Subchapter;
+
 
 class AdminController extends Controller
 {
@@ -28,9 +30,11 @@ class AdminController extends Controller
      */
     public function index()
     {
+        $allSubchapter = Subchapter::all();
         $allChapters = Chapter::all();
         return View::make("viewChapters")
-            ->with('allChapters', $allChapters);
+            ->with('allChapters', $allChapters)
+            ->with('allSubchapter', $allSubchapter);
     }
 
     public function indexChapter()
@@ -131,6 +135,70 @@ class AdminController extends Controller
             Session::flash('message', 'Hoofdstuk veilig verwijderd');
             return Redirect::back();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------SubShapters----------------------------------------*/
+
+
+
+    public function indexSubChapter() {
+        $allChapters = Chapter::all();
+        return View::make("addSubChapter")
+            ->with('allChapters', $allChapters);
+    }
+    public function show_add_subchapter() {
+
+        $chapters = Chapter::all();
+
+        return view('');
+    }
+
+    public function add_subchapter(Request $request) {
+
+        $this->validate($request, [
+            'nr' => 'required|integer|min:1',
+            'name' => 'required|string|max:100',
+            'chapter' => 'required',
+        ]);
+
+        $subchapter = new Subchapter([
+            'nr' => $request->nr,
+            'name' => $request->name,
+            'chapter_id' => $request->chapter
+        ]);
+        $subchapter->save();
+
+        Session::flash('message', 'Subhoofdstuk toegevoegd');
+        return redirect('addSubChapter');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 

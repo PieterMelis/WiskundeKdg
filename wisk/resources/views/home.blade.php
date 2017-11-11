@@ -16,8 +16,9 @@
                     @endif
                         <div class="links">
                             <a href="{{ url('/addChapter') }} " class="">Hoofdstuk toevoegen</a>
-                            <a href="{{ url('/viewChapters') }} " class="">Al de hoofdstuken</a>
                             <a href="{{ url('/addSolution') }} " class="">Oplossing toevoegen</a>
+                            <a href="{{ url('/viewChapters') }} " class="">Al de hoofdstuken</a>
+                            <a href="{{ url('/addSubChapter') }} " class="">Sub hoofdstuk toevoegen</a>
                         </div>
                         <br>
                         <table class="table table-striped table-bordered">
@@ -35,13 +36,10 @@
                                     <td>{{ $value->chapter }}</td>
 
                                     <td>
-
-
                                         <a class="btn btn-small btn-success" href="{{ URL::to('chapter/' . $value->id) }}">Oefeningen</a>
                                     </td>
+
                                 </tr>
-
-
                             @endforeach
 
                             </tbody>
