@@ -20,7 +20,7 @@
         {{ Form::text('chapter', Input::old('chapter'), array('class' => 'form-control')) }}
     </div>
 
-    {{ Form::submit('Add toilet', array('class' => 'btn btn-primary')) }}
+    {{ Form::submit('Hoofdstuk toevoegen', array('class' => 'btn btn-primary')) }}
 
     {{ Form::close() }}
 
