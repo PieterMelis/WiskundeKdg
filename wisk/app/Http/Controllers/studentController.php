@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
+
+
 use Wiskunde\Solution;
+use Wiskunde\Subchapter;
 
 class studentController extends Controller
 {
@@ -21,7 +24,12 @@ class studentController extends Controller
      */
     public function indexSolution()
     {
-        return view("addSolution");
+        $subChapter = Subchapter::all();
+        $chapter = Chapter::all();
+
+        return view("addSolution")
+            ->with('subChapter', $subChapter)
+            ->with('chapter', $chapter);
     }
 
     /**
@@ -47,6 +55,7 @@ class studentController extends Controller
         $rules = array(
             'title'      => 'required',
             'chapter'     => 'required' ,
+            'subchapter'     => 'required' ,
             'exercise'       => 'required',
             'image'      => 'required|image'
 
@@ -66,6 +75,7 @@ class studentController extends Controller
             $solution = new Solution();
             $solution->title           = Input::get('title');
             $solution->chapter         = Input::get('chapter');
+            $solution->subchapter_id   = Input::get('subchapter');
             $solution->exercise        = Input::get('exercise');
             $solution->view            = 1;
             $solution->picture         = $name;
@@ -90,10 +100,19 @@ class studentController extends Controller
     public function show($id)
     {
         $chapter = Chapter::find($id);
-        $solution = Solution::where('chapter' ,$chapter->nr)->get();
+        $subChapter = Subchapter::where('chapter_id' ,$chapter->id)->get();
+
+        return View::make('viewSubChapter')
+            ->with('subChapter', $subChapter);
+    }
+    public function viewSolution($id)
+    {
+        $subChapter = Subchapter::find($id);
+        $chapter = Chapter::find($id);
+        $solution = Solution::where('subchapter_id' ,$subChapter->id)->where('chapter' ,$chapter->id)->get();
 
         return View::make('viewSolution')
-            ->with('chapter', $chapter)
+            ->with('subChapter', $subChapter)
             ->with('solution', $solution);
     }
 

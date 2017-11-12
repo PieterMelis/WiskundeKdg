@@ -25,7 +25,7 @@
 
             <select name="chapter" id="chapter">
                 @foreach($allChapters as $chapter)
-                    <option value="{{$chapter->id}}">{{$chapter->nr}} {{$chapter->name}}</option>
+                    <option value="{{$chapter->id}}">{{$chapter->nr}} {{$chapter->chapter}}</option>
                 @endforeach
             </select>
     </div>

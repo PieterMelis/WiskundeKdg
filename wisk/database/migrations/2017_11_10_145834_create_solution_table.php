@@ -21,6 +21,7 @@ class CreateSolutionTable extends Migration
             $table->string('picture');
             $table->integer('view');
             $table->string('userName');
+            $table->integer('subchapter_id');
             $table->softDeletes();
             $table->timestamps();
         });

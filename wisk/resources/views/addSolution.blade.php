@@ -18,10 +18,16 @@
             {{ Form::text('title', Input::old('title'), array('class' => 'form-control')) }}
         </div>
 
-        <div class="form-group">
-            {{ Form::label('chapter', 'Hoofdstuk',array('class' => 'required'))  }}
-            {{ Form::text('chapter', Input::old('chapter'), array('class' => 'form-control')) }}
-        </div>
+        <select name="chapter" id="chapter">
+            @foreach($chapter as $chapter)
+                <option value="{{$chapter->id}}">{{$chapter->nr}} {{$chapter->chapter}}</option>
+            @endforeach
+        </select>
+        <select name="subchapter" id="subchapter">
+            @foreach($subChapter as $subchapter)
+                <option value="{{$subchapter->id}}">{{$subchapter->chapter}} {{$subchapter->nr}} {{$subchapter->name}}</option>
+            @endforeach
+        </select>
 
         <div class="form-group">
             {{ Form::label('exercise', 'Oefening',array('class' => 'required'))  }}

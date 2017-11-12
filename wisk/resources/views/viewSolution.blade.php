@@ -11,7 +11,7 @@
 
 
 
-    <h1>{{$chapter->chapter}}</h1>
+    <h1>{{$subChapter->chapter}}</h1>
     @foreach($solution as $key => $value)
 
 

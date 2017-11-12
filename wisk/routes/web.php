@@ -41,6 +41,7 @@ Route::get('/addSubChapter', 'adminController@indexSubChapter');
 
 Route::get('addSolution', 'studentController@indexSolution');
 Route::post('solution', 'studentController@storeSolution');
+Route::get('solution/{id}', 'studentController@viewSolution');
 
 
 
