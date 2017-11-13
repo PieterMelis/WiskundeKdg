@@ -14,38 +14,29 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <div class="links">
-                            <a href="{{ url('/addChapter') }} " class="">Hoofdstuk toevoegen</a>
-                            <a href="{{ url('/addSolution') }} " class="">Oplossing toevoegen</a>
-                            <a href="{{ url('/viewChapters') }} " class="">Al de hoofdstuken</a>
-                            <a href="{{ url('/addSubChapter') }} " class="">Sub hoofdstuk toevoegen</a>
-                        </div>
+
                         <br>
-                        <table class="table table-striped table-bordered">
+                        <table class="table table-bordered">
                             <thead>
-                            <tr>
-                                <td>Nr</td>
-                                <td>Hoofdstuk</td>
-                                <td></td>
-                            </tr>
+
                             </thead>
                             <tbody>
                             @foreach($allChapters as $key => $value)
-                                <tr>
-                                    <td>{{ $value->nr }}</td>
-                                    <td>{{ $value->chapter }}</td>
 
-                                    <td>
-                                        <a class="btn btn-small btn-success" href="{{ URL::to('chapter/' . $value->id) }}">Oefeningen</a>
-                                    </td>
+                                    <h3>{{ $value->nr }}  {{ $value->chapter }}</h3>
+                                @foreach($allSubchapters as $key => $x)
+                                    @if($value->id == $x->chapter_id)
+                                    <li class="ex">{{ $x->nr }} {{ $x->name }}
+                                        <a class="btn btn-small btn-success" href="{{ URL::to('solution/' . $x->id) }}">Oefeningen</a>
+                                    </li>
 
-                                </tr>
+
+                                    @endif
+                                @endforeach
                             @endforeach
 
                             </tbody>
                         </table>
-
-
 
             </div>
         </div>

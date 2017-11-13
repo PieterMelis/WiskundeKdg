@@ -256,10 +256,6 @@
 .form-horizontal .control-label {
     text-align: left;
 }
-.btn {
-    border-radius: 0;
-    width: 90%;
-}
 
 
 
@@ -403,10 +399,15 @@
     transition-delay: 0.2s;
 }
 
+.chap{
+    width: 100%;
+    text-align: left;
+    margin-top: 1em;
+}
+.sub{
+    width: 100%;
 
-
-
-
+}
 
 
 

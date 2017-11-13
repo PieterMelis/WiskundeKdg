@@ -77,7 +77,7 @@ class studentController extends Controller
             $solution->chapter         = Input::get('chapter');
             $solution->subchapter_id   = Input::get('subchapter');
             $solution->exercise        = Input::get('exercise');
-            $solution->view            = 1;
+            $solution->view            = 0;
             $solution->picture         = $name;
             $solution->userName        = Auth::user()->name;
 
@@ -108,8 +108,7 @@ class studentController extends Controller
     public function viewSolution($id)
     {
         $subChapter = Subchapter::find($id);
-        $chapter = Chapter::find($id);
-        $solution = Solution::where('subchapter_id' ,$subChapter->id)->where('chapter' ,$chapter->id)->get();
+        $solution = Solution::where('subchapter_id' ,$subChapter->id)->get();
 
         return View::make('viewSolution')
             ->with('subChapter', $subChapter)

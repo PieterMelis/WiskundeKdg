@@ -3,38 +3,22 @@
 @section('content')
 
 <div class="container">
-
-    <table class="table table-striped table-bordered">
-        <thead>
-        <tr>
-            <td>Nr</td>
-            <td>Hoofdstuk</td>
-            <td></td>
-        </tr>
-        </thead>
-        <tbody>
-    @foreach($allChapters as $key => $value)
-        <tr>
-            <td>{{ $value->nr }}</td>
-            <td>{{ $value->chapter }}</td>
-
-            <td>
+    <a href="{{ url('/addChapter') }} " class="btn btn-default">Hoofdstuk toevoegen</a>
 
 
-                {{ Form::open(array('url' => 'delete/' . $value->id)) }}
-                {{ Form::hidden('_method', 'post') }}
-                {{ Form::submit('Delete', array('class' => 'btn btn-danger')) }}
-                {{ Form::close() }}
+
+        @foreach($allChapters as $key => $value)
+        <a href="{{ url('chap/edit/'. $value->id) }} " class="chap btn btn-primary"><h3>{{ $value->nr }}  {{ $value->chapter }}</h3></a>
+            @foreach($allSubchapter as $key => $x)
+                @if($value->id == $x->chapter_id)
+                        <a href="{{ url('sub/edit/'. $x->id) }} " class="sub btn btn-default text-center">{{ $x->nr }} {{ $x->name }}</a>
+                @endif
+            @endforeach
+
+        @endforeach
 
 
-            </td>
-        </tr>
 
-
-    @endforeach
-
-        </tbody>
-    </table>
 
 </div>
 @endsection

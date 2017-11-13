@@ -42,16 +42,28 @@ class AdminController extends Controller
         return view("addChapter");
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function adminSolution()
     {
-        //
-    }
+        $solution = Solution::all();
 
+        return View::make('adminSolution')
+            ->with('solution', $solution);
+    }
+    public function good($id)
+    {
+        $solution = Solution::find($id);
+        $solution->view            = 1;
+        $solution->save();
+
+        Session::flash('message', ' Deze oplossing is juist');
+        return Redirect::back();
+    }
+    public function bad($id)
+    {
+        $sol = Solution::findOrFail($id);
+        $sol->delete($id);
+        return Redirect::back();
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -83,51 +95,6 @@ class AdminController extends Controller
     }
 
 
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
     public function delete( $id) {
 
             $chapter = Chapter::findOrFail($id);
@@ -141,33 +108,86 @@ class AdminController extends Controller
 
 
 
+    public function editChap($id)
+    {
+        $chap = Chapter::find($id);
+        return view("editChapter")
+            ->with('chap',$chap);
+    }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function updateChap(Request $request, $id)
+    {
+        $rules = array(
+            'nr' => 'required|integer|min:1',
+            'chapter' => 'required|string|max:100'
+        );
+        $validator = Validator::make(Input::all(), $rules);
 
+        if ($validator->fails()) {
+            return Redirect::back()
+                ->withErrors($validator)
+                ->withInput();
+        } else {
 
+            $chap               = Chapter::find($id);
+            $chap->nr           = Input::get('nr');
+            $chap->chapter          = Input::get('chapter');
+            $chap->save();
 
+            Session::flash('message', ' Aangepast!!');
+            return Redirect::back();
+        }
+    }
 
-
-
-
-
-
-
-
-/*----------------------------------------SubShapters----------------------------------------*/
-
-
-
-    public function indexSubChapter() {
+    public function editSub($id)
+    {
         $allChapters = Chapter::all();
-        return View::make("addSubChapter")
-            ->with('allChapters', $allChapters);
+        $sub = Subchapter::find($id);
+        return view("editSubchapter")
+            ->with('sub', $sub)
+            ->with('allChapters',$allChapters);
     }
-    public function show_add_subchapter() {
 
-        $chapters = Chapter::all();
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function updateSub(Request $request, $id)
+    {
+        $rules = array(
+            'nr' => 'required|integer|min:1',
+            'name' => 'required|string|max:100',
+            'chapter' => 'required',
+        );
+        $validator = Validator::make(Input::all(), $rules);
 
-        return view('');
+        if ($validator->fails()) {
+            return Redirect::back()
+                ->withErrors($validator)
+                ->withInput();
+        } else {
+
+            $sub               = Subchapter::find($id);
+            $sub->nr     = Input::get('nr');
+            $sub->name       = Input::get('name');
+            $sub->save();
+
+            Session::flash('message', ' Aangepast!!');
+            return Redirect::back();
+        }
     }
+
+
 
     public function add_subchapter(Request $request) {
 

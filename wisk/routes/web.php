@@ -32,9 +32,15 @@ Route::post('delete/{id}', 'adminController@delete');
 Route::get('/chapter/{id}', 'studentController@show');
 
 Route::post('/subChapter', 'adminController@add_subchapter');
-Route::get('/addSubChapter', 'adminController@indexSubChapter');
+Route::get('/viewSubChapters', 'adminController@indexSubChapter');
 
 
+Route::get('chap/edit/{id}', 'adminController@editChap');
+Route::post('chap/update/{id}', 'adminController@updateChap');
+
+
+Route::get('sub/edit/{id}', 'adminController@editSub');
+Route::post('sub/update/{id}', 'adminController@updateSub');
 
 
 /*-------------------------Solution----------------------------*/
@@ -44,9 +50,9 @@ Route::post('solution', 'studentController@storeSolution');
 Route::get('solution/{id}', 'studentController@viewSolution');
 
 
-
-
-
+Route::get('/adminSolution', 'adminController@adminSolution');
+Route::get('/solution/good/{id}', 'adminController@good');
+Route::get('/solution/bad/{id}', 'adminController@bad');
 
 
 

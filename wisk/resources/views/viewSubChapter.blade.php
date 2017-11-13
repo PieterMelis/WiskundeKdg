@@ -3,12 +3,13 @@
 @section('content')
 
 <div class="container">
+    <li><a href="{{ url('/addSubChapter') }} " class="">Subhoofdstuk toevoegen</a></li>
 
     <table class="table table-striped table-bordered">
         <thead>
         <tr>
             <td>Nr</td>
-            <td>Hoofdstuk</td>
+            <td>Subhoofdstuk</td>
             <td></td>
         </tr>
         </thead>
@@ -19,7 +20,12 @@
             <td>{{ $value->name }}</td>
 
             <td>
-                <a class="btn btn-small btn-success" href="{{ URL::to('solution/' . $value->id) }}">Oefeningen</a>
+                {{ Form::open(array('url' => 'delete/' . $value->id)) }}
+                {{ Form::hidden('_method', 'post') }}
+                {{ Form::submit('Delete', array('class' => 'btn btn-danger')) }}
+                {{ Form::close() }}
+
+                Oefeningen</a>
             </td>
         </tr>
 
