@@ -8,9 +8,6 @@
 
 
 
-
-
-
     <h1>{{$subChapter->chapter}}</h1>
 
     @foreach($solution as $key => $value)

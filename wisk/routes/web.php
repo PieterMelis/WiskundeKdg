@@ -28,11 +28,12 @@ Route::get('/home', 'HomeController@index')
 Route::get('addChapter', 'adminController@indexChapter');
 Route::post('chapter', 'adminController@store');
 Route::get('viewChapters', 'adminController@index');
-Route::post('delete/{id}', 'adminController@delete');
+Route::post('chapter/delete/{id}', 'adminController@chapdelete');
+Route::post('subchapter/delete/{id}', 'adminController@subdelete');
 Route::get('/chapter/{id}', 'studentController@show');
 
 Route::post('/subChapter', 'adminController@add_subchapter');
-Route::get('/viewSubChapters', 'adminController@indexSubChapter');
+Route::get('/viewSubChapters', 'adminController@subchapter');
 
 
 Route::get('chap/edit/{id}', 'adminController@editChap');
@@ -53,6 +54,7 @@ Route::get('solution/{id}', 'studentController@viewSolution');
 Route::get('/adminSolution', 'adminController@adminSolution');
 Route::get('/solution/good/{id}', 'adminController@good');
 Route::get('/solution/bad/{id}', 'adminController@bad');
+Route::get('/solution/later/{id}', 'adminController@later');
 
 
 

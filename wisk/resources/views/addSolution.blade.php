@@ -31,7 +31,7 @@
 
         <div class="form-group">
             {{ Form::label('exercise', 'Oefening',array('class' => 'required'))  }}
-            {{ Form::text('exercise', Input::old('exercise'), array('class' => 'form-control')) }}
+            {{ Form::selectRange('exercise', 1, 30, Input::old('exercise'), array('class' => 'form-control')) }}
         </div>
 
         <div class="form-group">

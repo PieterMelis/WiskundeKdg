@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\IsAdmin;
-
 use Illuminate\Support\Facades\View;
 use Wiskunde\Solution;
 use Wiskunde\User;
@@ -44,10 +43,14 @@ class AdminController extends Controller
 
     public function adminSolution()
     {
+        $subchapter = Subchapter::all();
+        $chapters = Chapter::all();
         $solution = Solution::all();
 
         return View::make('adminSolution')
-            ->with('solution', $solution);
+            ->with('solution', $solution)
+            ->with('chapters', $chapters)
+            ->with('subchapter', $subchapter);
     }
     public function good($id)
     {
@@ -62,6 +65,15 @@ class AdminController extends Controller
     {
         $sol = Solution::findOrFail($id);
         $sol->delete($id);
+        return Redirect::back();
+    }
+    public function later($id)
+    {
+        $solution = Solution::find($id);
+        $solution->view            = 2;
+        $solution->save();
+
+        Session::flash('message', ' Deze oplossing is juist');
         return Redirect::back();
     }
     /**
@@ -91,11 +103,11 @@ class AdminController extends Controller
             $chapter->save();
         }
         Session::flash('message', 'Hoofdstuk toegevoegd');
-        return Redirect::to('home');
+        return Redirect::to('viewChapters');
     }
 
 
-    public function delete( $id) {
+    public function chapdelete( $id) {
 
             $chapter = Chapter::findOrFail($id);
             $chapter->delete($id);
@@ -104,7 +116,13 @@ class AdminController extends Controller
         }
 
 
+    public function subdelete( $id) {
 
+        $chapter = Subchapter::findOrFail($id);
+        $chapter->delete($id);
+        Session::flash('message', 'Subhoofdstuk veilig verwijderd');
+        return Redirect::back();
+    }
 
 
 
@@ -142,7 +160,8 @@ class AdminController extends Controller
             $chap->save();
 
             Session::flash('message', ' Aangepast!!');
-            return Redirect::back();
+
+            return Redirect::to('viewChapters');
         }
     }
 
@@ -166,8 +185,7 @@ class AdminController extends Controller
     {
         $rules = array(
             'nr' => 'required|integer|min:1',
-            'name' => 'required|string|max:100',
-            'chapter' => 'required',
+            'name' => 'required|string|max:100'
         );
         $validator = Validator::make(Input::all(), $rules);
 
@@ -183,11 +201,17 @@ class AdminController extends Controller
             $sub->save();
 
             Session::flash('message', ' Aangepast!!');
-            return Redirect::back();
+            return Redirect::to('viewChapters');
         }
     }
 
-
+    public function subchapter() {
+        $allSubchapter = Subchapter::all();
+        $allChapters = Chapter::all();
+        return view('addSubChapter')
+            ->with('allChapters', $allChapters)
+            ->with('allSubchapter', $allSubchapter);
+    }
 
     public function add_subchapter(Request $request) {
 
@@ -205,7 +229,7 @@ class AdminController extends Controller
         $subchapter->save();
 
         Session::flash('message', 'Subhoofdstuk toegevoegd');
-        return redirect('addSubChapter');
+        return Redirect::to('viewChapters');
     }
 
 

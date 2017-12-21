@@ -4,9 +4,7 @@
 
 <div class="container">
 
-    @if (Session::has('message'))
-        <div class="alert alert-info">{{ Session::get('message') }}</div>
-    @endif
+  
 
 
 
@@ -28,6 +26,7 @@
         {{ Form::submit('Hoofstuk aanpassen', array('class' => 'button')) }}
 
         {{ Form::close() }}
+
 
 </div>
 @endsection

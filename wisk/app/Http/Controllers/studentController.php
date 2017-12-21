@@ -80,6 +80,7 @@ class studentController extends Controller
             $solution->view            = 0;
             $solution->picture         = $name;
             $solution->userName        = Auth::user()->name;
+            $solution->email        = Auth::user()->email;
 
             $solution->save();
             // redirect

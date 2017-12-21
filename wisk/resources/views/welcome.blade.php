@@ -42,7 +42,7 @@
             <div class="links">
                 @if (Route::has('login'))
                         @auth
-                            <a href="{{ url('/home') }}" class="hollow button">Admin</a>
+                            <a href="{{ url('/home') }}" class="hollow button">Oefeningen</a>
                             @else
                                 <a href="{{ route('login') }}" class="hollow button">Login</a>
                                 <a href="{{ route('register') }} " class="hollow button">Register</a>
