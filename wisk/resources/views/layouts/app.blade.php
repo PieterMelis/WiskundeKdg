@@ -54,7 +54,7 @@
 
                         @else
 
-                                    <li><a href="{{ url('/home') }}">Home</a></li>
+                                    <li><a href="{{ url('/home') }}">Oefeningen Overzicht </a></li>
                                     <li><a href="{{ url('/addSolution') }} " class="">Oplossing toevoegen</a></li>
 
                                 @if ( (Auth::user()->admin) )

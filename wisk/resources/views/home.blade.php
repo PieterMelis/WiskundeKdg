@@ -14,7 +14,6 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                         <br>
                         <table class="table table-bordered">
                             <thead>
@@ -22,7 +21,6 @@
                             </thead>
                             <tbody>
                             @foreach($allChapters as $key => $value)
-
                                     <h3>{{ $value->nr }}  {{ $value->chapter }}</h3>
                                 @foreach($allSubchapters as $key => $x)
                                     @if($value->id == $x->chapter_id)
@@ -37,7 +35,6 @@
 
                             </tbody>
                         </table>
-
             </div>
         </div>
     </div>

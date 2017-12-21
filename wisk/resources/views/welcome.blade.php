@@ -54,7 +54,6 @@
         <div class="bottom-content-section text-center" data-magellan data-threshold="0">
 
         </div>
-
     </div>
 
     <div id="main-content-section" data-magellan-target="main-content-section">

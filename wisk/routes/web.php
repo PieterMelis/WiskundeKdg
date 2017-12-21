@@ -11,17 +11,20 @@
 |
 */
 
-Route::get('admin_area', ['middleware' => 'admin', function () {
-    //
-}]);
-
 
 Route::get('/', 'WelcomeController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')
-    ->name('home');
+
+Route::get('admin_area', ['middleware' => 'admin', function () {
+
+
+
+
+
+}]);
+
 
 
 /*-------------------------Chapter----------------------------*/
@@ -56,6 +59,9 @@ Route::get('/solution/good/{id}', 'adminController@good');
 Route::get('/solution/bad/{id}', 'adminController@bad');
 Route::get('/solution/later/{id}', 'adminController@later');
 
+
+Route::get('/home', 'HomeController@index')
+    ->name('home');
 
 
 

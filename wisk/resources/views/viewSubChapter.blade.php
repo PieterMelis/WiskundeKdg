@@ -28,8 +28,6 @@
                 Oefeningen</a>
             </td>
         </tr>
-
-
     @endforeach
 
         </tbody>
